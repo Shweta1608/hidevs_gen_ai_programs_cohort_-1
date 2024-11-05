@@ -1,1 +1,17 @@
+Document Retrieval System - 
+Build a RAG system that retrieves documents from a large dataset and generates summaries using vector embeddings. Apply chunking to efficiently handle and retrieve relevant sections of documents.
 
+
+i have created this applcation using RAG pipeline, i have used groq API , huggingface embeddings , AstraDB as vectorstore , langchain.
+i have used 3 files for documents that is PDF , PPTX and text.
+
+Steps for project
+1. added all requeried library
+2. loaded all document using DirectoryLoader 
+3. applied chunking using RecursiveCharacterTextSplitter , to break large document into small chunk
+4. then used  loader.load_and_split(text_splitter=splitter) is likely using a document loader that reads in the document(s) and then applies the splitter to divide it into chunks according to the chunk_size and chunk_overlap you defined.
+5. done embedding using HuggingFaceEmbeddings.
+6. strored in AstraDB vectorstore
+7. added prompt template to follow similar instruction to model
+8. then used LLM model "mixtral-8x7b-32768"
+9. used chain to Retrieve Context ,Prompt template,LLM will Generate Answer and then outplay will get display to user. 
