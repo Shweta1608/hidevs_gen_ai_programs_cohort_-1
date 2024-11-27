@@ -1,1 +1,21 @@
 
+Project details 
+Personalized AI Assistant with Memory - 
+Build an AI assistant that maintains memory over multiple conversations and retrieves information using a knowledge graph. Use LangGraph to integrate a dynamic 
+knowledge base for enhanced retrieval.
+
+
+i have created this applcation using RAG pipeline, i have used groq API , huggingface embeddings ,langchain, Neo4j for knowledgegraph 
+here i have used wikipedia loader and fetch deatils and created graph in neo4j 
+
+Steps for project
+1. added all requeried library and added neo4j creadential 
+2. using WikipediaLoader loaded deatails for Elizabeth I
+3. applied chunking using TokenTextSplitter into small chunk
+4. used "Gemma2-9b-It" LLM model and loaded that model into LLMGraphTransformer to read as graph 
+5. llm_transformer.convert_to_graph_documents using this converted document to graph and stroed in graph_documents
+6. used HuggingFaceEmbeddings
+7. created prompt template 
+8. Uses a structured LLM prompt to extract entities (e.g., people, organizations) from text and Executes Cypher queries to find relationships between entities in the Neo4j database.
+9. for Information Retrieval used Structured Retrieval for Queries Neo4j for entity relationships and Unstructured Retrieval for Uses Hugging Face embeddings for semantic search.
+10. for Standalone Questions added Answers based on structured/unstructured context and for Follow-up Questions Rephrases them using chat history.
