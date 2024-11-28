@@ -1,1 +1,4 @@
 i have created RAG document reader , and deployed using AWS. steps videos are provided separtly , please review 
+
+i have used here lambda , REST API , s3 bucket for document strorage , aws bedrock knowldge base 
+
