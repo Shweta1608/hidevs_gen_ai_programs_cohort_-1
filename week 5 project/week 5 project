@@ -1,0 +1,8 @@
+AI Legal Assistant - 
+Build a retrieval-based QA system for legal advice using agents. Implement corrective RAG techniques to refine retrieval accuracy and caching for improved performance. 
+Focus on document retrieval and complex legal queries.
+
+
+i have created this project using langchain , langgarph , groq and web serach i have used tavily tool. i have created RAG pipeline and agents using langgraph , given some 
+URL's as documents , when user ask query it will first search in documents , if it is not avalible then it will go web search using tavily tool and give answer.
+
